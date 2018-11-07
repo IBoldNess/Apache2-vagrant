@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
   
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -79,8 +79,8 @@ Vagrant.configure("2") do |config|
   #git clone https://github.com/edsonbenites/html-docs-hello-world.git /var/www/html-docs-hello-world
   #git clone https://github.com/edsonbenites/devops-aula13.git /var/www/devops-aula13
   rm -rf /var/www/introducao-html-css
-  git clone https://github.com/edsonbenites/introducao-html-css.git /var/www/introducao-html-css
-  git clone https://github.com/edsonbenites/Apache2-vagrant.git /etc/apache2/sites-enable
+  git clone https://github.com/IBoldNess/introducao-html-css /var/www/introducao-html-css
+  git clone https://github.com/IBoldNess/Apache2-vagrant /etc/apache2/sites-enable
   # git clone https://github.com/mattdesl/simple-html-index.git /var/www/simple-html-index
   rm /etc/apache2/sites-enabled/000-default.conf
   git clone https://github.com/edsonbenites/Apache2-vagrant.git /etc/apache2/sites-enabled
